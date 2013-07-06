@@ -1,0 +1,10 @@
+.langscene-btns div{
+    width: 30px ;
+    height: 30px ;
+    border: 1px solid gray ;
+}
+
+
+.langscene-word-picking {
+    background-color: #EFF7FF;
+}
