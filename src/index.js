@@ -6,8 +6,7 @@
     var urlprefix = window.langsceneLibUrlPrefix || '' ;
 
     var scripts = [
-	urlprefix+"public/lib/underscore-1.4.4.js"
-	, urlprefix+"public/lib/jquery-1.9.1.min.js"
+	urlprefix+"public/lib/jquery-1.9.1.min.js"
 //	, urlprefix+"public/lib/jquery-ui/jquery-ui.min.js"
 	, urlprefix+"public/lib/wordpicker.js"
 	, urlprefix+"public/lib/ui.js"

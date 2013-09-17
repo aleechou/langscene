@@ -15,5 +15,10 @@ LangScene 提供更好的网页取词体验，点击取词而不是划词：
 
 在浏览器地址栏内输入下面的代码：
 ```
-javascript:window.langsceneDoname="127.0.0.1:6060";var eleScript=document.createElement("script");eleScript.src="http://"+window.langsceneDoname+"/langscene/public/index.js";document.body.appendChild(eleScript);
+javascript:var eleScript=document.createElement("script");eleScript.src="https://github.com/aleechou/langscene/raw/master/public/index.js";eleScript.setAttribute('langscene-entrence');document.body.appendChild(eleScript);
+```
+
+localhost
+```
+javascript:var eleScript=document.createElement("script");eleScript.src="file:///home/alee/langscene/public/index.js";eleScript.setAttribute('langscene-entrence');document.body.appendChild(eleScript);
 ```
