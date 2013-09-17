@@ -1,17 +1,25 @@
 
+
 (function(window){
 
     console.log("init LangScene") ;
-    //window.Langscenedoname || (window.langsceneDoname="www.langscene.com") ;
-    var urlprefix = window.langsceneLibUrlPrefix || '' ;
+
+    // as chrome extension
+    if(typeof chrome!='undefined')
+        var urlprefix = chrome.extension.getURL('') ;
+    else
+    {
+        console.log("find url prefix") ;
+    }
+    console.log(urlprefix) ;
 
     var scripts = [
-	urlprefix+"public/lib/jquery-1.9.1.min.js"
-//	, urlprefix+"public/lib/jquery-ui/jquery-ui.min.js"
-	, urlprefix+"public/lib/wordpicker.js"
-	, urlprefix+"public/lib/ui.js"
-	, urlprefix+"public/lib/main.js"
+	urlprefix+"src/lib/wordpicker.js"
+	, urlprefix+"src/lib/ui.js"
+	, urlprefix+"src/lib/main.js"
     ] ;
+    if(!window.jQuery)
+        scripts.unshift(urlprefix+"src/lib/jquery-1.9.1.min.js") ;
 
     var now = new Date ;
     (function () {
@@ -27,7 +35,7 @@
     }) () ;
 
 
-    loadStyle(urlprefix+"public/style/style.css?r="+now.getTime().toString()) ;
+    loadStyle(urlprefix+"src/style/style.css?r="+now.getTime().toString()) ;
     function loadStyle (href) {
         var eleLink = document.createElement("link") ;
         eleLink.href = href ;

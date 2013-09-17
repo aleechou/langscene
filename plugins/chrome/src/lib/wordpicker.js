@@ -144,6 +144,8 @@ jQuery(function($){
 
             this.emit('picked',[word,event]) ;
 
+            event.originalEvent.cancelBubble = true ;
+            event.originalEvent.stopPropagation && event.originalEvent.stopPropagation();
             return event.originalEvent.returnValue = false ;
         }
 

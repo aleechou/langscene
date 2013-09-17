@@ -7,7 +7,15 @@
     "content_scripts": [ {  
           "exclude_globs": [  ],  
           "include_globs": [ "*" ],  
-          "js": [ "script.js" ],
+          "js": [
+              "src/lib/jquery-1.9.1.min.js"
+              , "src/lib/wordpicker.js"
+              , "src/lib/ui.js"
+              , "src/lib/main.js"
+          ],
+        "css": [
+            "src/style/style.css"
+        ],
           "matches": [ "http://*/*", "https://*/*" ],  
           "run_at": "document_end"  
        } ]
